@@ -1,4 +1,4 @@
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList } from "react-native";
 import {
   ButtonPatient,
   ContainerData,
@@ -34,7 +34,7 @@ const DataPatient = (props: {
   inicio: string;
   fim: string;
 }) => {
-  const itemAllergies: React.FC<{ item: any }> = ({ item }) => {
+  const itemAllergies = ({ item }: any): any => {
     return <SubTitlePatientAllergies>{item}</SubTitlePatientAllergies>;
   };
 

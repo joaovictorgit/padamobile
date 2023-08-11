@@ -216,3 +216,58 @@ export const IconTime = styled.Image.attrs({
   height: 10.28px;
   transform: rotate(179.15deg);
 `;
+
+export const ContainerHeaderVaccines = styled.View`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: -100px;
+  top: 35px;
+`;
+
+export const TitleHeaderVaccines = styled.Text`
+  color: #273047;
+  //font-family: Noto Sans KR;
+  font-size: 16px;
+  font-weight: 700;
+`;
+
+export const ContainerInputCalendarVaccines = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const InputCalendarVaccines = styled.TextInput`
+  background: rgba(218, 218, 218, 1);
+  width: 280px;
+  padding: 10px;
+  color: rgba(39, 48, 71, 0.5);
+  font-size: 15px;
+  font-weight: 400;
+`;
+
+export const IconWrapper = styled.View`
+  background: rgba(218, 218, 218, 1);
+  width: 35px;
+  height: 47.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+`;
+
+export const IconWrapperCalendar = styled.View`
+  background: rgba(218, 218, 218, 1);
+  width: 50px;
+  height: 47.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  left: -1px;
+  z-index: 5;
+`;

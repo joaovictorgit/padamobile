@@ -12,6 +12,7 @@ export type propsNavigationStack = {
   MeuPerfil: undefined;
   Paciente: undefined;
   ProfissionalResponsavel: undefined;
+  MyVaccines: undefined;
 };
 
 export type propsStack = NativeStackNavigationProp<propsNavigationStack>;

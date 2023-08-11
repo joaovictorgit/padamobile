@@ -14,7 +14,7 @@ import Paciente from "../../assets/imgPaciente.png";
 import ProfissionalSaude from "../../assets/profissionalSaude.png";
 import Perfil from "../../assets/imgPerfil.png";
 import TabBar from "../../components/buttonTabBar/buttonTabBar";
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList } from "react-native";
 import { ImageSourcePropType } from "react-native";
 import {
   TDoctor,
@@ -83,7 +83,7 @@ const TelaPrincipal = () => {
     },
   ];
 
-  const renderItem: React.FC<{ item: Item }> = ({ item }) => {
+  const renderItem = ({ item }: any): any => {
     return (
       <TagFluxo imageTag={item.image} title={item.title} text={item.text} />
     );
@@ -93,8 +93,8 @@ const TelaPrincipal = () => {
     <ContainerSafePrincipal>
       <HeaderFluxo
         title={`Olá, ${name}`}
-        backButton={false}
-        buttonVaccine={false}
+        backButton={true}
+        buttonVaccine={true}
         typeHeader="patient"
       />
       <ContainerPrincipal>

@@ -12,12 +12,13 @@ import {
   getDoctorById,
   getPatientDoctorId,
 } from "../../service/requests";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import apiPADA from "../../service/api";
 import store from "../../store/store";
+import { useWindowDimensions } from "react-native";
 
 const ProfissionalResponsavel = () => {
+  const [source, setSource] = useState("");
   const doctor: TDoctor = store.getState();
+  let url;
 
   return (
     <ContainerSafePrincipalPaciente>
@@ -27,6 +28,7 @@ const ProfissionalResponsavel = () => {
           backButton={true}
           buttonVaccine={true}
           typeHeader="doctor"
+          photo={source}
         />
         <DataDoctor
           crm={doctor.CRM}

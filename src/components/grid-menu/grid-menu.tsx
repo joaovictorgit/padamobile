@@ -24,7 +24,7 @@ const GridMenu = () => {
     { id: 8, title: "Item 2", image: require("../../assets/imgUserItem.png") },
     { id: 9, title: "Item 3", image: require("../../assets/imgUserItem.png") },
   ];
-  const renderGridItem: React.FC<{ item: Item }> = ({ item }) => {
+  const renderGridItem = ({ item }: any): any => {
     return (
       <Item>
         <ImageItem source={item.image} />

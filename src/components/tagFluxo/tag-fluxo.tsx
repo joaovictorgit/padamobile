@@ -26,6 +26,9 @@ const TagFluxo = (props: {
     if (props.title === "Profissional de saúde") {
       navigation.navigate("ProfissionalResponsavel");
     }
+    if (props.title === "Minhas vacinas") {
+      navigation.navigate("MyVaccines");
+    }
   };
 
   return (
