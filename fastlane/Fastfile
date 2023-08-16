@@ -1,8 +1,18 @@
-APP_IDENTIFIER = "com.padamobile.teste"
-PROJECT_NAME = "padamobile"
-GIT_ACCESS = ENV["GIT_ACCESS"]
-
-update_fastlane if is_ci
-
-before_all do
-    
+platform :android do
+    lane :build do
+      gradle(
+        task: "assembleRelease",
+        build_type: "Release",
+        module: "app"
+      )
+    end
+  
+    lane :deploy_to_play_store do
+      supply(
+        track: 'alpha', # ou 'beta', 'production', etc.
+        skip_upload_apk: false,
+        json_key: ENV["JSON_KEY"]
+      )
+    end
+  end
+  

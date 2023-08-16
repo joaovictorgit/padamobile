@@ -1,0 +1,31 @@
+name: Android CI/CD with Fastlane
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: "11"
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+
+      - name: Install Fastlane
+        run: gem install bundler && bundle install
+
+      - name: Build and deploy
+        run: bundle exec fastlane android build deploy_to_play_store
+        env:
+          JSON_KEY: ${{ secrets.JSON_KEY }}
