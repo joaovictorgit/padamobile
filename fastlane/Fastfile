@@ -1,0 +1,8 @@
+APP_IDENTIFIER = "com.padamobile.teste"
+PROJECT_NAME = "padamobile"
+GIT_ACCESS = ENV["GIT_ACCESS"]
+
+update_fastlane if is_ci
+
+before_all do
+    
