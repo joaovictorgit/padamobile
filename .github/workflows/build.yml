@@ -19,13 +19,16 @@ jobs:
           node-version: "18"
 
       - name: Install Expo CLI
-        run: npm install -g expo-cli
+        run: yarn global add expo-cli
+
+      - name: Install Eas CLI
+        run: yarn global add @expo/eas-cli
 
       - name: Install Dependencies
         run: yarn install
 
       - name: Authenticate with EAS
-        run: expo login -u Br0wnd3r -p alfatrai619
+        run: expo login -u br0wnd3r -p alfatrai619
 
       - name: Build Expo Project
         run: eas build --platform android # ou yarn expo build:ios
